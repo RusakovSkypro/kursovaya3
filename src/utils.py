@@ -10,7 +10,7 @@ def load_operation(file_path):
 def mask_card(str_):
     str_list = str_.split(' ')
     numb = str_list[-1]
-    if not str_list[0] == 'Счет':
+    if (not str_list[0] == 'Счёт') and (not str_list[0] == 'Счет'):
         return " ".join(str_list[:-1]) + ' ' + numb[:4] + ' ' + numb[4:6] + '** **** ' + numb[-4:]
     else:
         return "Счёт" + ' **' + numb[-4:]
