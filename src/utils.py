@@ -11,9 +11,9 @@ def mask_card(str_):
     str_list = str_.split(' ')
     numb = str_list[-1]
     if not str_list[0] == 'Счет':
-        return "Счёт " + numb[:4] + ' ' + numb[4:6] + '** **** ' + numb[-4:]
+        return " ".join(str_list[:-1]) + ' ' + numb[:4] + ' ' + numb[4:6] + '** **** ' + numb[-4:]
     else:
-        return " ".join(str_list[:-1]) + ' **' + numb[-4:]
+        return "Счёт" + ' **' + numb[-4:]
 
 
 def filter_sort(data):
